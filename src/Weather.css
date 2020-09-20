@@ -1,0 +1,64 @@
+.Weather {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-left: 5px;
+  }
+  
+  .Weather img {
+    height: 120px;
+  }
+  
+  .Weather h1 {
+    font-family: "Lora", serif;
+    font-weight: 700;
+    font-size: 84px;
+  
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .Weather h2 {
+    font-family: "Lora", serif;
+    font-size: 64px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .Weather span.c-f {
+    font-size: 20px;
+    position: relative;
+    top: -35px;
+  }
+  
+  .Weather h3 {
+    font-family: "Lora", serif;
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  
+  .Weather p {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .Weather a {
+    color: #ec6e4b;
+    text-decoration: none;
+    transition: ease-in-out;
+  }
+  
+  .Weather a:hover {
+    color: #797879;
+    text-decoration: underline;
+  }
+  
+  .Weather a.active {
+    color: #464647;
+    cursor: default;
+  }
+  
+  .Weather a.active:hover {
+    text-decoration: none;
+  }
+  

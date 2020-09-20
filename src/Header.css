@@ -1,0 +1,18 @@
+.Header {
+    padding: 20px 15px 10px 15px;
+    overflow: hidden;
+    border-bottom: 1px solid #464647;
+  }
+  
+  .Header h2 {
+    font-family: "Lora", serif;
+    font-weight: 700;
+    font-size: 36px;
+    float: left;
+  }
+  
+  .Header nav {
+    float: right;
+    margin-top: 5px;
+  }
+  

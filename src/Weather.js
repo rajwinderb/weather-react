@@ -1,48 +1,43 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React from "react";
+import "./Weather.css";
 
-export default function Weather(){
-    let [city, setCity] = useState("");
-  let [weather, setWeather] = useState("");
-
-  function showTemperature(response) {
-    setWeather(
-      <ul>
-        <li>City: {city}</li>
-        <li>Temperature : {Math.round(response.data.main.temp)} °C</li>
-        <li>Description: {response.data.weather[0].description}</li>
-        <li>Humidity: {response.data.main.humidity} %</li>
-        <li>Wind: {response.data.wind.speed} km/h</li>
-        <img
-          src={`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`}
-          alt="weather"
-        />
-      </ul>
-    );
-  }
-  function handleSubmit(event) {
-    event.preventDefault();
-    let apiKey = "c1b241c9ee4ba5b2a6cffb1b36346f23";
-    let units = "metric";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-
-    axios.get(apiUrl).then(showTemperature);
-  }
-
-  function updateCity(event) {
-    setCity(event.target.value);
-  }
+export default function Weather() {
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="search"
-          placeholder="Enter a City…"
-          onChange={updateCity}
+    <div className="Weather">
+      <h1 className="city" id="city">
+        Rome
+      </h1>
+      <h2 className="temp-and-icon">
+        <img
+          src="http://openweathermap.org/img/wn/02d@2x.png"
+          alt="few clouds"
+          id="main-weather-icon"
         />
-        <input type="submit" />
-      </form>
-      {weather}
+        <span className="now-temp" id="now-temp">
+          25
+        </span>
+        <span className="c-f">
+          <a href="/" id="celsius" className="active">
+            °C
+          </a>{" "}
+          |{" "}
+          <a href="/" id="fahrenheit">
+            °F
+          </a>
+        </span>
+      </h2>
+
+      <h3>
+        <span id="high-temp">26</span>°/<span id="low-temp">23</span>°
+      </h3>
+
+      <p>
+        <span id="description">few clouds</span>
+        <br />
+        humidity: <span id="humidity">83</span> % <br />
+        wind: <span id="wind">7</span>
+        <span id="wind-units">km/h</span> <br />
+      </p>
     </div>
   );
 }
