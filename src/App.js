@@ -6,13 +6,13 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <div className="container">
-          <Header />
-          <Weather />
+        <div>
+          <div className="container">
+            <Header />
+            <Weather />
+          </div>
+          <p className="code"> <a href="https://github.com/rajwinderb/weather-react" target="_blank">Open-source Code</a> by Rajwinder Bhatoe </p>
         </div>
-
-      </header>
     </div>
   );
 }
